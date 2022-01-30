@@ -24,7 +24,7 @@ jobs:
         run: docker build -t docker-cloudcli .
 
       - name: Run and verify cloudcli the built image.
-        run: docker run -it docker-cloudcli:latest env TERM=xterm /usr/local/bin/cloudcli --help
+        run: docker run --tty docker-cloudcli:latest env TERM=xterm /usr/local/bin/cloudcli --help
 
   # If on main branch, build and release image.
   release:
